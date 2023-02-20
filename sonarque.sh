@@ -41,7 +41,7 @@ echo "changing ownership and switching to linux binaries..."
 sleep 3
 sudo chown -R vagrant:vagrant /opt/sonarqube-9.3.0.51899
 cd /opt/sonarqube-9.3.0.51899/bin/linux-x86-64/
- ./sonar.sh start
+ ./sonarqube.sh start
  if [ $? -eq o ]
 then 
 echo "sonarqube started successfully"
