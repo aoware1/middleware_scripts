@@ -32,7 +32,7 @@ fi
 echo "extracting packages....."
 sleep 3
 sudo yum install unzip -y
-sudo unzip /opt/sonarqube-9.3.0.51899.zip
+sudo unzip /opt/sonarqube-9.3.0.51899.zip -y
 if [ $? -eq 0 ]
 then 
 echo "sonarqube extracted successfully"
@@ -44,7 +44,7 @@ echo "changing ownership and switching to linux binaries..."
 sleep 3
 sudo chown -R vagrant:vagrant /opt/sonarqube-9.3.0.51899
 cd /opt/sonarqube-9.3.0.51899/bin/linux-x86-64/
-./sonarqube.sh start
+./sonar.sh start
 if [ $? -eq 0 ]
 then 
 echo "sonarqube started successfully"
